@@ -4,13 +4,10 @@
 (function ( $ ) {
 	$.fn.slideshow = function (options) {
 		// Handle settings
-		var settings = $.extend({
-			// Defaults.
-			'height': '500px'
-		}, options );
-		$(".slideshow").css(settings);
+		if(typeof options !== 'null' && typeof options !== 'undefined') {
+			$(".slideshow").css(options);
+		}
 		// Slide the images.
-		
 		sce_slide();
 		
 		return this;
